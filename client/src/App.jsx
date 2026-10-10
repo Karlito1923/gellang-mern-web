@@ -48,7 +48,8 @@ function App() {
  
   const deleteStudent = async (id) => {
     try {
-      await axios.delete(`https://gellang-mern-web-pjo9.vercel.app/students${id}`);
+      // Add the missing slash "/" here between students and id
+      await axios.delete(`https://gellang-mern-web-pjo9.vercel.app/students/${id}`);
       await getStudents();
     } catch (error) {
       console.log(error);
